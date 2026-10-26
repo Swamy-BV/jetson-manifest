@@ -1,7 +1,9 @@
-# Jetson manifest
+# Axiom
 
-Yocto Wrynose source manifest for NVIDIA Jetson, with ROS 2 and SWUpdate sources.
-The BSP provides **JetPack 7.2.1 / Jetson Linux R39.2.1**.
+Embedded AI and robotics on NVIDIA Jetson, built with Yocto.
+
+Source manifest for **JetPack 7.2.1 / Jetson Linux R39.2.1**, using Wrynose
+with ROS 2 and SWUpdate layers.
 
 ## Checkout
 

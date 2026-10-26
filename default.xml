@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- JetPack 7.2.1 / Jetson Linux R39.2.1, Yocto Wrynose.
+       Branch-head snapshot: 2026-10-26. BitBake uses Wrynose's 2.18 series. -->
+  <default revision="wrynose" sync-j="4" sync-c="true" />
+
+  <remote name="oe" fetch="https://github.com/openembedded" />
+  <remote name="tegra" fetch="https://github.com/OE4T" />
+  <remote name="swupdate" fetch="https://github.com/sbabic" />
+  <remote name="ros" fetch="https://github.com/ros" />
+
+  <!-- Build tools and common packages. -->
+  <project name="bitbake" remote="oe" path="sources/bitbake"
+           revision="6e260eb6ab1631607ea414d9ff8ede1155faa5d9" upstream="refs/heads/2.18" />
+  <project name="openembedded-core" remote="oe" path="sources/openembedded-core"
+           revision="884a91e689d545238cfabd7926c93663950ca286" upstream="refs/heads/wrynose" />
+  <project name="meta-openembedded" remote="oe" path="sources/meta-openembedded"
+           revision="f28a144aa0a0ae05ca2ee91e1aef6aa05f6a12db" upstream="refs/heads/wrynose" />
+
+  <!-- Jetson BSP. -->
+  <project name="meta-tegra" remote="tegra" path="sources/meta-tegra"
+           revision="feab7664000f313f655d20d2f39c04432214dc25" upstream="refs/heads/wrynose" />
+
+  <!-- Update and ROS sources; image integration follows in our custom layer. -->
+  <project name="meta-swupdate" remote="swupdate" path="sources/meta-swupdate"
+           revision="b5dcb9511266bc62f9b2277f95bbd67ae995e79e" upstream="refs/heads/wrynose" />
+  <project name="meta-ros" remote="ros" path="sources/meta-ros"
+           revision="0ecfd176e806536bdd3d203a86b05cbc4fdd43ed" upstream="refs/heads/wrynose" />
+</manifest>

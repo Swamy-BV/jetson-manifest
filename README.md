@@ -12,8 +12,10 @@ mkdir jetson
 cd jetson
 repo init -u https://github.com/Swamy-BV/jetson-manifest.git -b develop
 repo sync
+source axiom-setup.sh -b build
+bitbake axiom-image
 ```
 
-Sources are checked out under `sources/`. Revisions are pinned from the latest
+Sources are checked out under `sources/`. Upstream revisions are pinned from the latest
 Wrynose branch heads as of 2026-10-26; BitBake uses the corresponding `2.18`
-branch. Update the pins together when refreshing the baseline.
+branch. `meta-axiom` follows `develop`.

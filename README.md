@@ -11,7 +11,7 @@ cd jetson
 repo init -u https://github.com/Swamy-BV/jetson-manifest.git -b develop
 repo sync
 source axiom-setup.sh -b build
-bitbake axiom-image
+bitbake axiom-update
 ```
 
 Sources: `sources/`. Build directory: `build/`.
